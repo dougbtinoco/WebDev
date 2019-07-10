@@ -1,0 +1,72 @@
+/* ALUNO: DOUGLAS BUZZANELLO TINOCO      NºUSP: 8936360 */
+.jumbotron{
+
+	text-align: center;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-control{
+	width: 80%;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+.glyphicon-remove-sign{
+
+	background-color: transparent;
+	color: red;
+	border-radius: 4px;
+
+}
+
+.glyphicon-edit{
+
+	background-color: transparent;
+	border-radius: 4px; 
+}
+
+.glyphicon-thumbs-up{
+
+	background-color: transparent;
+	border-radius: 4px;
+}
+
+.glyphicon-share-alt{
+
+	background-color: transparent;
+	border-radius: 4px;
+}
+
+body{
+
+	background-color:  #d9d9d9;
+}
+
+#leftSide{
+	float: left;
+	margin-left: 30px;
+	width: 400px;
+}
+
+#rightSide{
+	float: right;
+	margin-right: 30px;
+	width: 400px;
+}
+#topicos{
+	font-size: 18px;
+}	
