@@ -1,0 +1,88 @@
+<!-- ALUNO: DOUGLAS BUZZANELLO TINOCO      NºUSP: 8936360 -->
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br" ng-app="paginaUsuario">
+<head>
+	<meta charset="ISO-8"/>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link href="lib/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/front_page.js"></script>
+	<link href="lib/user_page.css" rel="stylesheet" type="text/css">
+	<script src="lib/user_page.js"></script>
+	<title>DeWeb Pesquisa</title>
+</head>
+<body ng-controller="postsController">
+	<div>
+		<header style="background-color: #000d33;">
+			<div> 
+				<img src="imgs/logo_w.png" width="300" style="display: block; margin-left: auto; margin-right: auto;">
+			</div>
+		</header>
+	</div>
+	<nav class="navbar navbar-default bavbar-fixed-top">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li><a href="home_page.html">Ini&#769;cio</a></li>
+				<li><a href="user_page_user.html">Perfil</a></li>
+				<li ng-click="verGrupos()"><a href="grupos.html">Grupos</a></li>
+				<li ng-click="editarPerfil()" ><a href="editar.html">Edi&ccedil;a&#771;o</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li ng-click="sairSite()"><a href="front_page.html"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>
+			</ul>
+			
+			<form class="navbar-form" role="search">
+				<div class="input-group">
+					<input type="text" class="form-control" style="width: 250px; height: 28px; padding: 3px; margin-right: 25px; border-radius: 4px; background-color: #e5e5e5;" placeholder="Pesquisar">
+					<span class="input-group-btn">
+						<button type="reset" class="btn btn-default" style="border-radius: 4px;">
+							<span class="glyphicon glyphicon-remove">
+								<span class="sr-only">Cancelar</span>
+							</span>
+						</button>
+						<button type="submit" class="btn btn-default" ng-click="pesquisar()" style="border-radius: 4px;">
+							<span ng-click="pesquisar()" class="glyphicon glyphicon-search">
+								<span ng-click="pesquisar()" class="sr-only">Pesquisar</span>
+							</span>
+						</button> 
+					</span>
+				</div>
+			</form>
+		</div>
+	</nav>
+
+	<div id="leftSide" class="jumbotron">
+		<aside>
+			<p class="glyphicon glyphicon-globe" style="font-size: 24px;"> Postagens mais acessados:</p>
+			<p id="topicos">#Topico1</p>
+			<p id="topicos">#Topico2</p>
+			<p id="topicos">#Topico3</p>
+		</aside>
+	</div>
+
+	<div class="jumbotron">
+		<h3>Resultado da pesquisa:</h3>
+		resultados obtidos a partir de acesso ao banco de dados<br>
+	</div>
+
+
+	<div>
+		<footer>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			<p style="text-align: center; color: black;">DeWeb &copy; Desenvolvido por Douglas B. Tinoco</p> 
+		</footer>
+	</div>
+
+</body>
+</html>

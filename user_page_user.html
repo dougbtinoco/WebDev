@@ -1,0 +1,121 @@
+<!-- ALUNO: DOUGLAS BUZZANELLO TINOCO      NºUSP: 8936360 -->
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br" ng-app="paginaUsuario">
+<head>
+	<meta charset="ISO-8"/>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link href="lib/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/front_page.js"></script>
+	<link href="lib/user_page.css" rel="stylesheet" type="text/css">
+	<script src="lib/user_page.js"></script>
+	<title>DeWeb User's Page</title>
+</head>
+<body ng-controller="postsController">
+	<div>
+		<header style="background-color: #000d33;">
+			<div>
+				<img src="imgs/logo_w.png" width="300" style="display: block; margin-left: auto; margin-right: auto;">
+			</div>
+		</header>
+	</div>
+	<nav class="navbar navbar-default bavbar-fixed-top">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li><a href="home_page.html">Ini&#769;cio</a></li>
+				<li><a href="user_page_user.html">Perfil</a></li>
+				<li ng-click="verGrupos()"><a href="grupos.html">Grupos</a></li>
+				<li ng-click="editarPerfil()" ><a href="editar.html">Edi&ccedil;a&#771;o</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li ng-click="sairSite()"><a href="front_page.html"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>
+			</ul>
+			
+			<form class="navbar-form" role="search">
+				<div class="input-group">
+					<input type="text" class="form-control" style="width: 250px; height: 28px; padding: 3px; margin-right: 25px; border-radius: 4px; background-color: #e5e5e5;" placeholder="Pesquisar">
+					<span class="input-group-btn">
+						<button type="reset" class="btn btn-default" style="border-radius: 4px;">
+							<span class="glyphicon glyphicon-remove">
+								<span class="sr-only">Cancelar</span>
+							</span>
+						</button>
+						<button type="submit" class="btn btn-default" ng-click="pesquisar()" style="border-radius: 4px;">
+							<span class="glyphicon glyphicon-search">
+								<span class="sr-only">Pesquisar</span>
+							</span>
+						</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</nav>
+
+	<div id="leftSide" class="jumbotron">
+		<aside>
+			<p class="glyphicon glyphicon-globe" style="font-size: 24px;"> Postagens mais acessados:</p>
+			<p id="topicos">#Topico1</p>
+			<p id="topicos">#Topico2</p>
+			<p id="topicos">#Topico3</p>
+		</aside>
+	</div>
+
+	<!-- informações pessoais-->
+	<div class="jumbotron">
+		<div class="container">
+			<aside>
+				<img src="imgs/user_default_img.png" width="150">
+				<p style="font-size: 60px; float: right; margin-right: 300px;">Pedro Santos</p>
+				<div>
+					<button type="button" class="btn btn-success" data-toggle="collapse" data-target="#info">Informa&ccedil;o&#771;es</button>
+				  	<div id="info" class="collapse">
+				    	<p>Bio de Pedro Santos.</p>
+				   		<p>Data de Nascimento.</p>
+				  	</div>
+				</div>
+			</aside>
+		</div>		
+	</div>
+	<!-- Posts-->
+	<div class="jumbotron">
+		<div>     <!-- VERIFICAR FORMA DE CARREGAR-->
+			<header style=" font-weight: bold; font-size: 26px;">U&#769;ltimas Postagens</header>
+			<form name="postForm" method="POST" action="/">
+			<input class="form-control" type="text" ng-model="novo_post.postagem" ng-minlength="1" ng-maxlength="500" placeholder="maximo de 500 caracteres."></input>
+
+			<button class="btn btn-primary" ng-click="inserirPost(novo_post)" ng-disabled="!(novo_post.postagem)">Postar</button>
+			
+			</form>
+		<div ng-repeat="novo_post in posts">
+			<!--{{posts}}-->
+			<hr><p id="posting">
+
+			<button class="glyphicon glyphicon-remove-sign" ng-click="apagarPost(posts, novo_post)" title="Apagar" style="float: right; margin-right: 30px;">	
+			</button>
+			<button class="glyphicon glyphicon-edit" ng-click="editarPost(posts, novo_post)" title="Editar" style="float: right; margin-right: 5px;">
+			</button>
+			<button class="glyphicon glyphicon-thumbs-up" ng-click="curtirPost(post)" title="Gostou?" style="float: right; margin-right: 5px;">
+			</button>
+			<button class="glyphicon glyphicon-share-alt" ng-click="compartilharPost(post)" title="Compartilhar" style="float: right; margin-right: 5px;" >
+			</button>
+			
+			{{novo_post.postagem}}
+		
+			</p>
+		</div>
+
+		</div> <!-- final div de posts-->
+	</div> <!-- final div jumbotron-->
+
+	<div>
+		<footer>
+			<p style="text-align: center; color: black;">DeWeb &copy; Desenvolvido por Douglas B. Tinoco</p> 
+		</footer>
+	</div>
+
+</body>
+</html>

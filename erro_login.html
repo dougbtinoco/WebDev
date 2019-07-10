@@ -1,0 +1,45 @@
+<!-- ALUNO: DOUGLAS BUZZANELLO TINOCO      NºUSP: 8936360 -->
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="paginaInicial">
+<head>
+	<meta charset="ISO-8"/>
+	<link href="lib/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+	<script src="lib/angular/angular.js"></script>
+	<link href="lib/erro_login.css" rel="stylesheet" type="text/css">
+	<script src="lib/front_page.js"></script>
+	<title>DeWeb</title>
+</head>
+<body ng-controller="cadastroController" background="imgs/background.jpg">
+	<div>
+		<header>
+			<div>
+				<img src="imgs/logo_w.png" width="400" style="margin-left: 100px; float: left;margin-top: 0px;">
+			</div>
+			<br>
+		</header>
+	</div>
+	<div class="jumbotron">
+		<section>
+			<h2>Erro no login! Verifique usuario e/ou senha!</h2>
+			<br>
+			<div>
+				<div id="login">
+					<input class="form-control input-sm" type="text" ng-model="login.usuario" placeholder="Usuario"></input>
+				</div>
+				<div id="login">
+					<input class="form-control input-sm" type="password" ng-model="login.senha" placeholder="Senha"></input>
+					<button class="btn btn-danger btn-block" ng-click="verificarUsuario(login)">Entrar</button>
+					{{login.usuario}} {{login.senha}}
+				</div>
+			</div>
+		</section>
+	</div> 
+	<div>
+		<footer>
+			<p style="text-align: center; color: white;">DeWeb &copy; Desenvolvido por Douglas B. Tinoco</p> 
+		</footer>
+	</div>
+
+
+</body>
+</html>
